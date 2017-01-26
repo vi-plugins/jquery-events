@@ -1,11 +1,11 @@
-# JQueryPluginBase
+# jQuery Plugin Events
 
 An event helper class written with TypeScript for the [jQuery Plugin Boilerplate](https://github.com/virtualidentityag/jquery-plugin-boilerplate)
 It contains generic functions that simplify event handling within all kinds of plugins
 
 ## Naming convention
 
-The naming convention should be `[?prefix].[action].[?area].[pluginName]`
+The naming convention pattern should be: `[?prefix].[action].[?area].[pluginName]`
 
 - `prefix` (optional) - the prefix mostly describes the temporal state like `before` or `after`
 - `action` - this is the most important part of the event name. It describes the action of that specific event
