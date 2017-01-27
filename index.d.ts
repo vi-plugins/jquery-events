@@ -3,12 +3,11 @@ export default class JQueryPluginEvents {
     /**
      * Wrap method calls with before and after events (jQuery trigger) on given element
      *
-     * @param eventName - The event name postfix that will be prefixed with "before." and "after."
-     * @param fn - The function to wrap
-     * @param $element - The element that triggers the event
-     * @param scope - The function scope
-     * @param params - Array of params
-     * @returns {any}
+     * @param $element - the element that triggers the event
+     * @param eventName - the event name postfix that will be prefixed with "before." and "after."
+     * @param fn - the function to wrap
+     * @param params (optional) - Array of params attached to both triggered events
+     * @returns {any} - returns the result, if any, of the given function call
      */
-    static wrapEvents(eventName: string, fn: Function, $element: JQuery, scope: any, params: any): any;
+    static wrapEvents($element: JQuery, eventName: string, fn: Function, params?: any): any;
 }

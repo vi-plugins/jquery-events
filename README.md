@@ -26,11 +26,10 @@ This static function is used to automatically wrap jQuery events `before` and `a
 Because it uses jQuery [Events](https://api.jquery.com/category/events/event-object/) you can stop the ongoing process within the initial `before` event by setting `event.preventDefault()`
 
 ### Parameters
+- `$element` - the jQuery element on which the event is fired
 - `eventName` - the desired event name excluding the `before`/`after` prefixes
 - `fn` - the function
-- `$element` - the jQuery element on which the event is fired
-- `scope` - the scope the function is called on
-- `params` - the optional params for the function
+- `params` (optional) - optional params that will be added to the events
 
 ### Example
 

@@ -6,25 +6,29 @@ var JQueryPluginEvents = (function () {
     /**
      * Wrap method calls with before and after events (jQuery trigger) on given element
      *
-     * @param eventName - The event name postfix that will be prefixed with "before." and "after."
-     * @param fn - The function to wrap
-     * @param $element - The element that triggers the event
-     * @param scope - The function scope
-     * @param params - Array of params
-     * @returns {any}
+     * @param $element - the element that triggers the event
+     * @param eventName - the event name postfix that will be prefixed with "before." and "after."
+     * @param fn - the function to wrap
+     * @param params (optional) - Array of params attached to both triggered events
+     * @returns {any} - returns the result, if any, of the given function call
      */
-    JQueryPluginEvents.wrapEvents = function (eventName, fn, $element, scope, params) {
+    JQueryPluginEvents.wrapEvents = function ($element, eventName, fn, params) {
+        if (params === void 0) { params = []; }
         var event = $.Event('before.' + eventName);
+        var result;
+        if (!$.isFunction(fn)) {
+            throw 'Invalid function provided to wrapEvents';
+        }
         // trigger event before function is executed
         $element.trigger(event, params);
         // ignore default function and "after" event if prevented
         if (!event.isDefaultPrevented()) {
             // call wrapped function
-            fn.apply(scope, params);
+            result = fn();
             // trigger event after function was executed
             $element.trigger('after.' + eventName, params);
         }
-        return scope;
+        return result;
     };
     return JQueryPluginEvents;
 }());
