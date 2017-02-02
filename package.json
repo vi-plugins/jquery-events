@@ -1,11 +1,11 @@
 {
-	"name": "jquery-plugin-events",
+	"name": "jquery-events",
 	"description": "jQuery event helper functions",
-	"version": "0.0.2",
+	"version": "0.1.0",
 	"main": "index.js",
 	"module": "index.ts",
 	"typings": "index.d.ts",
-	"repository": "https://github.com/virtualidentityag/jquery-plugin-events.git",
+	"repository": "https://github.com/vi-plugins/jquery-events.git",
 	"author": "Jan Rembold <jan.rembold@virtual-identity.com>",
 	"license": "MIT",
 	"scripts": {
