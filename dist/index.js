@@ -1,6 +1,7 @@
-///<reference types="jquery"/>
 "use strict";
-var JQueryPluginEvents = (function () {
+///<reference types="jquery"/>
+Object.defineProperty(exports, "__esModule", { value: true });
+var JQueryPluginEvents = /** @class */ (function () {
     function JQueryPluginEvents() {
     }
     /**
@@ -32,5 +33,4 @@ var JQueryPluginEvents = (function () {
     };
     return JQueryPluginEvents;
 }());
-exports.__esModule = true;
-exports["default"] = JQueryPluginEvents;
+exports.default = JQueryPluginEvents;

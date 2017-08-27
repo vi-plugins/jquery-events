@@ -1,18 +1,18 @@
 {
 	"name": "jquery-events",
 	"description": "jQuery event helper functions",
-	"version": "0.1.0",
-	"main": "index.js",
-	"module": "index.ts",
-	"typings": "index.d.ts",
+	"version": "1.0.0",
+	"main": "dist/index.js",
+	"types": "dist/index.d.ts",
+	"typings": "dist/index.d.ts",
 	"repository": "https://github.com/vi-plugins/jquery-events.git",
 	"author": "Jan Rembold <jan.rembold@virtual-identity.com>",
 	"license": "MIT",
 	"scripts": {
-		"build": "tsc --declaration index.ts"
+		"build": "tsc"
 	},
 	"devDependencies": {
 		"@types/jquery": "^2.0.39",
-		"typescript": "^2.1.5"
+		"typescript": "^2.4.2"
 	}
 }
